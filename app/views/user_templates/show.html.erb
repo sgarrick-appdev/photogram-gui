@@ -1,12 +1,20 @@
 
-<h1> <%= @the_user.id %></h1>
+<h1> <%= @the_user.username %></h1>
 
 <dl>
 <dt>ID</dt>
-<dd> 42</dd>
+<dd> <%= @the_user.id %></dd>
 
 <dt>Edit user</dt>
-<dd>form goes here</dd>
+<dd>
+<form action="/update_user/<%= @the_user.username%>">
+      <label for="update_user">Username</label>
+      <input id="update_user" type="text" name="query_username_update" value="<%= @the_user.username%>">
+
+      <button>Update user</button>
+    </form>
+    
+  </dd>
 
 
 <h2>Own photos (<%= @the_user.own_photos.size%>) </h2>

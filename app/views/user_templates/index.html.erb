@@ -1,5 +1,16 @@
 <h1>List of users</h1>
 
+<hr>
+
+<form action = "/insert_username">
+
+<label for = "new_name">Username</label>
+<input id = "new_name" type="text" name="query_username" placeholder="Enter a username...">
+<button>Add user</button>
+
+</form>
+<hr>
+
 <table border = "1">
 <tr>
 <th>
@@ -24,7 +35,7 @@ Username
 
      <td>
       <a href = "/users/<%=a_user.username%>">
-      Show Detals
+      Show Details
       </a>
 
     </td>
